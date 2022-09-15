@@ -1,0 +1,9 @@
+.idea
+venv
+*.pytest_cache
+reports/selene/*
+reports/allure/*
+allure-reports/
+allure-results/
+*.log
+*.pyc
