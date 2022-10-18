@@ -6,7 +6,9 @@ from pandas import DataFrame
 class Cleaner:
     @staticmethod
     def drop_nan(df: DataFrame) -> DataFrame:
-        return df.dropna()
+        new_df = df.dropna()
+        new_df.reset_index()
+        return new_df
 
     @staticmethod
     def clean_zero_val(df: DataFrame, not_zero_params: list[(str, Union[int, float])]) -> DataFrame:
